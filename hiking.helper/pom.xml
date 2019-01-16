@@ -50,13 +50,15 @@
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <version>1.4.197</version>
-            <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
+            <artifactId>spring-boot-test</artifactId>
+            <version>2.1.2.RELEASE</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>com.jayway.restassured</groupId>
             <artifactId>rest-assured</artifactId>
@@ -109,7 +111,7 @@
                     <dependency>
                         <groupId>org.springframework</groupId>
                         <artifactId>springloaded</artifactId>
-                        <version>${spring-loaded.version}</version>
+                        <version>1.2.8.RELEASE</version>
                     </dependency>
                 </dependencies>
             </plugin>
