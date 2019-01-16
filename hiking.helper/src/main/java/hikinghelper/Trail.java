@@ -1,6 +1,5 @@
 package hikinghelper;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -10,16 +9,17 @@ public class Trail {
 
     @Id
     @GeneratedValue
-    @Column
     private Long id;
-    @Column
-    private String Name;
-    @Column
+
+    private String name;
+
     private Double length;
-    @Column
-    private Double latitude;
-    @Column
+
     private Double longitude;
+
+    private Double latitude;
+
+
 
     public Trail(){
 
@@ -34,11 +34,11 @@ public class Trail {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public Double getLength() {
@@ -63,5 +63,16 @@ public class Trail {
 
     public void setLongitude(Double longitude) {
         this.longitude = longitude;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", length=" + length +
+                ", latitude=" + latitude +
+                ", longitude=" + longitude +
+                '}';
     }
 }
